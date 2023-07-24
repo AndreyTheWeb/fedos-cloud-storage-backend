@@ -7,9 +7,9 @@ const generateId = () =>
     .join('');
 
 const normalizeFileName = (req, file, callback) => {
-  const fileExtName = file.originalName.split('.').pop();
+  const fileExtName = file.originalname.split('.').pop();
 
-  callback(null, `${generateId}.${fileExtName}`);
+  callback(null, `${generateId()}.${fileExtName}`);
 };
 
 export const fileStorage = diskStorage({
